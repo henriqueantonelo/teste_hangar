@@ -1,0 +1,21 @@
+main {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 25px;
+}
+
+pre {
+  margin: auto;
+  width: 100%;
+  text-align: left;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: "Courier New", Courier, monospace;
+  min-width: 650px;
+}

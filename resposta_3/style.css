@@ -1,19 +1,21 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  margin-top: 200px;
 }
 table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin: auto;
+  font-weight: bold;
+  background-color: white;
 }
 table,
 th,
 td {
-  border: 1px solid #ddd;
+  border: solid 1px rgb(0, 0, 0);
   padding: 8px;
   text-align: left;
 }
-form {
-  margin-bottom: 20px;
+.form-container {
+  text-align: center;
+  margin-bottom: 25px;
 }

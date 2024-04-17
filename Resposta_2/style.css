@@ -1,6 +1,40 @@
+:root {
+  --background-color: rgb(255, 255, 255);
+  --odd: #f5f5f5;
+  --even: #bbbbbb;
+  --headerbg: rgb(56, 56, 56);
+}
+
 .table-row-odd {
-  background-color: #f5f5f5;
+  background-color: var(--odd);
 }
 .table-row-even {
-  background-color: #bbbbbb;
+  background-color: var(--even);
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 30vh auto;
+  font-weight: bold;
+  background-color: white;
+  border: solid 1px rgb(0, 0, 0);
+}
+
+td,
+th {
+  padding: 8px;
+  text-align: left;
+}
+
+.print-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.print-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
