@@ -8,27 +8,25 @@
 </head>
 <body>
     <?php
-require_once('conexao.php');
-// Consulta SQL para calcular a média dos pedidos por dia
+    // conexão com o banco de dados
+    require_once('../conexao/conexao.php');
 $sql = "SELECT DATE(order_date) AS order_day, AVG(order_total) AS avg_order_total
         FROM orders
         GROUP BY DATE(order_date)";
 
 $result = $conn->query($sql);
 
-// Iniciar a construção da tabela HTML
+
 echo '<table border="1">
 <tr>
 <th>Data do Pedido</th>
 <th>Média dos Pedidos por Dia</th>
 </tr>';
 
-// Iterar sobre os resultados da consulta
 while ($row = $result->fetch_assoc()) {
     $orderDay = $row['order_day'];
     $avgOrderTotal = $row['avg_order_total'];
     
-    // Definir a cor da linha com base na média dos pedidos
     $colorClass = '';
     if ($avgOrderTotal < 3000) {
         $colorClass = 'red';
@@ -38,7 +36,6 @@ while ($row = $result->fetch_assoc()) {
         $colorClass = 'gray';
     }
     
-    // Exibir a linha da tabela com formatação condicional de cor
     echo '<tr class="' . $colorClass . '">
     <td>' . $orderDay . '</td>
     <td>' . number_format($avgOrderTotal, 2) . '</td>
